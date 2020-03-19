@@ -1,5 +1,16 @@
 package ar.com.ada.sb.api.persistence.advice;
 
+import ar.com.ada.sb.api.persistence.exception.ApiEntityError;
+import ar.com.ada.sb.api.persistence.exception.BusinessLogicException;
+import ar.com.ada.sb.api.persistence.exception.validations.ApiErrorsResponseBody;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.context.request.NativeWebRequest;
+
+import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+
 // este Advice espara definir las capturas de las excepciones que se puedan disparar en nuestro
 // codigo, inicialmente vamos a capturar las excepciones de tipo BusinessLogicException
 @RestControllerAdvice

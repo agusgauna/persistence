@@ -1,6 +1,11 @@
 package ar.com.ada.sb.api.persistence.exception;
 
-@Getter @Setter
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
 @NoArgsConstructor
 public class ApiEntityError {
     private String entity;

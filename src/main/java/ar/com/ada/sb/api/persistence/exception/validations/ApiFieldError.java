@@ -1,6 +1,12 @@
 package ar.com.ada.sb.api.persistence.exception.validations;
 
-@Getter @Setter
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
 @NoArgsConstructor
 @JsonPropertyOrder({"field", "code", "message"})
 public class ApiFieldError {

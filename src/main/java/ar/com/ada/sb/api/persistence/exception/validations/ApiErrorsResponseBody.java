@@ -1,5 +1,14 @@
 package ar.com.ada.sb.api.persistence.exception.validations;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.sql.Timestamp;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
