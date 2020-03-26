@@ -19,8 +19,8 @@ public class Course implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Column(name = "name")
+
+    @Column(name = "name", nullable = false, length = 30, unique = true)
     private String name;
 
     @NotNull
